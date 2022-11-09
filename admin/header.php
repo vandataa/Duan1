@@ -18,7 +18,7 @@
             <div class="">
                 <ul class="flex">
                     <li class="text-white pr-4 pt-3 "><a class="hover:bg-blue-300 p-[7px] rounded" href="index.php?build=ldm">Danh mục</a></li>
-                    <li class="text-white pr-4 pt-3 "><a class="hover:bg-blue-300 p-[7px] rounded" href="index.php?build=canho">Căn hộ</a> </li>
+                    <li class="text-white pr-4 pt-3 "><a class="hover:bg-blue-300 p-[7px] rounded" href="index.php?build=addhome">Căn hộ</a> </li>
                     <li class="text-white pr-4 pt-3 "><a class="hover:bg-blue-300 p-[7px] rounded" href="index.php?build=khachhang">Khách hàng</a></li>
                     <li class="text-white pr-4 pt-3 "><a class="hover:bg-blue-300 p-[7px] rounded" href="index.php?build=tk">Tài khoản</a></li>
                     <li class="text-white pr-4 pt-3 "><a class="hover:bg-blue-300 p-[7px] rounded" href="index.php?build=tuvan">Tư vấn</a></li>

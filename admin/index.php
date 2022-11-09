@@ -1,6 +1,7 @@
 <?php
 include '../model/pdo.php';
 include '../model/danhmuc.php';
+include '../model/canho.php';
 include 'header.php';
 
 
@@ -43,7 +44,37 @@ if (isset($_GET['build']) && ($_GET['build'])) {
             $listdm = loadall_dm();
             include 'danhmuc/list.php';
             break;
-
+        case 'addhome':
+            if(isset($_POST['themmoi'])&&($_POST['themmoi'])){
+                $iddm = $_POST['iddm'];
+                $vitri = $_POST['vitri'];
+                $niemyet = $_POST['niemyet'];
+                $hinh = $_FILES['hinh']['name'];
+                $target_dir = "../uploads/";
+                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                    //echo "The file ". htmlspecialchars( basename( $_FILES["hinh"]["name"])). " has been uploaded.";
+                } else {
+                    //echo "Sorry, there was an error uploading your file.";
+                }
+                $mota = $_POST['mota'];
+                insert_ch($iddm,$vitri,$niemyet,$hinh,$mota);
+            }
+            
+            $listdm = loadall_dm();
+            include 'canho/addch.php';
+            break;
+            case 'lch':
+                if (isset($_POST['listok']) && ($_POST['listok'])) {
+                    $iddm = $_POST['iddm'];
+                } 
+                else{
+                    $iddm = 0;
+                }
+                $listdm = loadall_dm();
+                $listch = loadall_ch_cungloai($iddm);
+                include './canho/list.php';
+                break;
         default:
             include 'home.php';
             break;
