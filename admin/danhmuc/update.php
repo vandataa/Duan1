@@ -11,7 +11,7 @@
         <br>
         <input class="bg-sky-400 rounded p-1 text-white" type="submit" name="capnhat" value="Cập nhật">
         <input type="hidden" name="id" value="<?php  if(isset($id)&&($id>0)) echo $id?>">
-        <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?act=ldm">Danh sách sản phẩm</a></button>
+        <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=ldm">Danh sách sản phẩm</a></button>
         <?php
             if(isset($thongbao)&&($thongbao!='')) echo $thongbao;
         ?>

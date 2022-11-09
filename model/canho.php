@@ -18,4 +18,9 @@ function loadall_ch_cungloai($iddm)
     $listsp = pdo_query($sql);
     return $listsp;
 }
+function delete_ch($id)
+{
+    $sql = "DELETE FROM `canho` WHERE id = " . $_GET['id'];
+    pdo_execute($sql);
+}
 ?>

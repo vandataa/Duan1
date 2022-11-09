@@ -27,8 +27,7 @@
         </table>
         <a href="index.php?build=adddm"><input class="bg-sky-400 rounded p-1 text-white" type="submit" name="themmoi"
                 value="Thêm mới"></a>
-        <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=ldm">Danh sách sản
-                phẩm</a></button>
+        <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=ldm">Danh sách danh mục</a></button>
         <?php
         if (isset($thongbao) && ($thongbao != ''))
             echo $thongbao;
