@@ -49,6 +49,7 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                 $iddm = $_POST['iddm'];
                 $vitri = $_POST['vitri'];
                 $niemyet = $_POST['niemyet'];
+                $trangthai = $_POST['tinhtrang'];
                 $hinh = $_FILES['hinh']['name'];
                 $target_dir = "../uploads/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
@@ -58,9 +59,9 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                     //echo "Sorry, there was an error uploading your file.";
                 }
                 $mota = $_POST['mota'];
-                insert_ch($iddm, $vitri, $niemyet, $hinh, $mota);
+                insert_ch($iddm, $vitri, $niemyet, $hinh, $mota, $trangthai);
             }
-
+            $listst = loadall_status();
             $listdm = loadall_dm();
             include 'canho/addch.php';
             break;
@@ -79,8 +80,15 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                 delete_ch($_GET['id']);
             }
             $listdm = loadall_dm();
-            $listch = loadall_ch_cungloai($iddm=0);
+            $listch = loadall_ch_cungloai($iddm = 0);
             include 'canho/list.php';
+            break;
+        case 'suach':
+            if (isset($_GET['id']) && ($_GET['id']) > 0) {
+                $home = loadone_ch($_GET['id']);
+            }
+            $listdm = loadall_dm();
+            include './canho/update.php';
             break;
         default:
             include 'home.php';

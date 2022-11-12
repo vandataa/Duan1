@@ -3,8 +3,9 @@
         <table class="mx-auto">
             <thead class="mb-3">
                 <tr class="bg-blue-400 m-3">
-                    <th class="w-[170px]">Mã Loại</th>
-                    <th class="w-[200px]">Tên danh mục</th>
+                    <th class="w-[45%]">Mã Loại</th>
+                    <th class="w-[45%]">Tên danh mục</th>
+                    <th class="w-[10%]">Chức năng</th>
                     <th></th>
                 </tr>
             </thead>
@@ -17,8 +18,8 @@
                 <td class="text-center">' . $id . '</td>
                 <td class="text-center">' . $tendanhmuc . '</td>
                 <td>
-                    <a href="' . $suadm . '" class="p-1 bg-blue-300 rounded">Sửa</a> 
-                    <a href="' . $xoadm . '" class="p-1 bg-blue-300 rounded">Xóa</a>
+                    <a href="' . $suadm . '" class=" ml-3 bg-blue-300 rounded">Sửa</a> 
+                    <a href="' . $xoadm . '" class=" bg-blue-300 rounded">Xóa</a>
                 </td>
             </tr>';
                 } ?>

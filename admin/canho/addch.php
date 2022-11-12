@@ -17,7 +17,14 @@
         <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
         <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="Hình ảnh tham khảo" >
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Trạng thái</h1>
-        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="trangthai" value="Trạng thái căn hộ" >
+        <select name="tinhtrang" id="">
+            <?php
+            foreach($listst as $st){
+                extract($st);
+                echo'<option value="'.$id.'">'.$status_home.'</option>';
+            }
+            ?>
+        </select>
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Mô tả chi tiết</h1>
         <textarea class="border " name="mota" id="" cols="80" rows="10"></textarea>
         <br>
