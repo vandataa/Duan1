@@ -14,6 +14,15 @@ function loadone_ch($id){
     $ch = pdo_query_one($sql);
     return $ch;
 }
+function update_ch($id,$iddm, $vitri, $niemyet, $hinh, $mota, $trangthai){
+    if ($hinh !="") {
+        $sql = "UPDATE `canho` set `vitri` = '" .$vitri. "', `niemyet` = '" .$niemyet. "',`hinh` ='" .$hinh. "',`mota` = '" .$mota. "', `iddm` = '" . $iddm . "',`tinhtrang`='".$trangthai."' WHERE `canho`.`id` = '{$id}'" ;
+    }
+    else {
+        $sql = "UPDATE `canho` set `vitri` = '" .$vitri. "', `niemyet` = '" .$niemyet. "',`mota` = '" .$mota. "', `iddm` = '" . $iddm . "',`tinhtrang`='".$trangthai."' WHERE `canho`.`id` = '{$id}'" ;
+    }
+    pdo_execute($sql);
+}
 function loadall_ch_cungloai($iddm)
 {   
     $sql = "SELECT * FROM `canho` where 1 ";

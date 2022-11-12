@@ -15,7 +15,7 @@
         <input type="submit" name="listok" value="OK">
     </form>
     <table class="mx-auto ">
-        <thead class="w-[1200px] mb-2">
+        <thead class="w-full mb-2">
            
             <tr class="bg-blue-200 w-full">
                 <th class="w-[50px] ">Mã Nhà</th>

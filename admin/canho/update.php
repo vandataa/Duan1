@@ -4,9 +4,9 @@ if (is_array($home)) {
 }
 $hinhpath = "../uploads/" . $hinh;
 if (is_file($hinhpath)) {
-    $hinh = "<img src='" . $hinhpath . "' width='80'>";
+    $hinhs = "<img src='" . $hinhpath . "' width='80'>";
 } else {
-    $hinh = "no photo";
+    $hinhs = "no photo";
 }
 $id = $_GET["id"];
 ?>
@@ -36,7 +36,7 @@ $id = $_GET["id"];
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="niemyet"
                 value="<?= $niemyet ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
-            <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="<?= $hinh ?>">
+            <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="<?= $hinhs ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Trạng thái</h1>
             <select name="tinhtrang" id="">
                 <?php
