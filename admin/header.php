@@ -13,7 +13,7 @@
     <div class="max-w-full mx-auto">
         <div class=" bg-black flex justify-between">
             <div class="logo pl-4">
-                <a href=""><span class="text-[30px] text-orange-300">D</span><span class="text-white">landing</span></a>
+                <a href=""><span class="text-[40px] text-orange-300">D</span><span class="text-white">landing</span></a>
             </div>
             <div class="">
                 <ul class="flex">
