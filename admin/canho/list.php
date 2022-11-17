@@ -1,5 +1,5 @@
 <div class="mx-auto max-w-7xl bg-white p-3 mt-2 rounded ">
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-8xl">
         <form action="index.php?build=lch" method="post">
 
             <input type="text" name="kyw" id="">
@@ -41,14 +41,14 @@
                     $hinh = 'no photo';
                 }
                 $ulr = explode('/', $video);
-                print "<br>";
+             
 
                 echo ' <tr>
             <td>' . $id . '</td>
             <td>' . $vitri . '</td>
             <td class="w-5 h-3">' . $hinhch . '</td>
             <td>
-            <iframe src="https://www.youtube.com/embed/print_r' . $ulr[3] . '" frameborder="0" controls></iframe>
+            <iframe src="https://www.youtube.com/embed/' . $ulr[3] . '" frameborder="0" controls autoplay></iframe>
             </td>
             <td>' . $niemyet . '</td>
             <td>' . $tinhtrang . '</td>
@@ -60,7 +60,7 @@
             } ?>
             </tbody>
         </table>
-        <iframe src="" frameborder="0"></iframe>
+        
         <a href="index.php?build=addhome"><input class="bg-sky-400 rounded p-1 text-white" type="submit" name="themmoi"
                 value="Thêm mới"></a>
         <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=lch">Danh sách nhà

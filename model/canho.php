@@ -42,5 +42,9 @@ function delete_ch($id)
     $sql = "DELETE FROM `canho` WHERE id = " . $_GET['id'];
     pdo_execute($sql);
 }
-
+function loadall_status_join(){
+    $sql = "SELECT * FROM `canho` inner join `tinhtang` on `canho`.`tinhtrang`=`tinhtrang`.`id`";
+    $listst = pdo_query($sql);
+    return $listst;
+}
 ?>
