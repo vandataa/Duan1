@@ -35,7 +35,15 @@
                     extract($tk);
                     $suatk = "index.php?build=suatk&id=" . $id;
                     $xoatk = "index.php?build=xoatk&id=" . $id;
-
+                    $chucvu1 = "";
+                    if($chucvu==1){
+                        $chucvu1 = 'Khách hàng';
+                    }elseif($chucvu ==2){
+                        $chucvu1 = 'Nhân viên';
+                    
+                    }elseif($chucvu ==3){
+                        $chucvu1 = 'Quản lí';
+                }
                     echo ' <tr>
             <td>' . $id . '</td>
             <td>' . $tendangnhap . '</td>
@@ -44,7 +52,7 @@
             <td>' . $sdt . '</td>
             <td>' . $diachi . '</td>
             <td>' . $hoten . '</td>
-            <td>' . $chucvu . '</td>
+            <td>' . $chucvu1 . '</td>
             <td>
                 <a href="' . $suatk . '" class="p-1 bg-blue-300 rounded">Sửa</a> 
                 <a href="' . $xoatk . '" class="p-1 bg-blue-300 rounded">Xóa</a>

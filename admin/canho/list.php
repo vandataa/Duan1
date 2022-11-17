@@ -41,7 +41,14 @@
                     $hinh = 'no photo';
                 }
                 $ulr = explode('/', $video);
-             
+                $trangThai = "";
+                if($tinhtrang == 1) {
+                    $trangThai = "Đang bán";
+                } elseif($tinhtrang == 2 ) {
+                    $trangThai = "Đang kí kết";
+                }elseif($tinhtrang == 3 ){
+                    $trangThai = "Đã bán";
+                }
 
                 echo ' <tr>
             <td>' . $id . '</td>
@@ -51,7 +58,7 @@
             <iframe src="https://www.youtube.com/embed/' . $ulr[3] . '" frameborder="0" controls autoplay></iframe>
             </td>
             <td>' . $niemyet . '</td>
-            <td>' . $tinhtrang . '</td>
+            <td>' . $trangThai   . '</td>
             <td >
                 <a href="' . $suach . '" class="p-1 bg-blue-300 rounded">Sửa</a> 
                 <a href="' . $xoach . '" class="p-1 bg-blue-300 rounded">Xóa</a>
