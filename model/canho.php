@@ -28,6 +28,7 @@ function loadall_ch_cungloai($iddm)
     $sql = "SELECT * FROM `canho` where 1 ";
     if ($iddm > 0) {
         $sql .= " and iddm ='" . $iddm . "'";
+        $sql .= "";
     }
     $listsp = pdo_query($sql);
     return $listsp;

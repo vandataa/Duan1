@@ -271,7 +271,7 @@
                             </li>
                         </ul>
                         <div class="side-nav">
-                            <a class="left" href="login.html">
+                            <a class="left" href="index.php?home=login">
                                 <i class='bx bxs-user'></i>
                                 Account
                             </a>

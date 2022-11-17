@@ -132,7 +132,7 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                 insert_nv($tk, $mk, $email, $sdt, $dc, $name, $chucvu);
                 $thongbao = "Thêm mới thành công";
             }
-            $listcv = load_cv();
+            $list_chucvu = load_cv();
             include 'taikhoan/add.php';
             break;
         case 'ltk':
@@ -162,18 +162,18 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                 $dc = $_POST['address'];
                 $name = $_POST['name'];
                 $chucvu = $_POST['chucvu'];
-                update_tk($id,$tk,$mk,$email,$sdt,$dc,$name,$chucvu);
+                update_tk($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
                 $thongbao = "update  thành công";
             }
-            
-            $listcv = loadall_nv_cungcap($chucvu = 0);
+            $listtk = loadall_nv_cungcap($chucvu);
+            $listnv = load_cv();
             include 'taikhoan/list.php';
             break;
         case 'khachhang':
-            
+
             $listkh = load_all_kh();
             include './Khachhang/listkh.php';
-            break;    
+            break;
         default:
             include 'home.php';
             break;
