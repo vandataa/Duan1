@@ -16,6 +16,8 @@
         <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="niemyet" value="Giá niêm yết dự kiến" >
         <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
         <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="Hình ảnh tham khảo" >
+        <h1 class="text-[17px] font-medium text-gray-600 p-2">Video tham khảo</h1>
+        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="video" value="video tham khảo" >   
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Trạng thái</h1>
         <select name="tinhtrang" id="">
             <?php

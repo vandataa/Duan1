@@ -21,30 +21,34 @@ $id = $_GET["id"];
             <select name="iddm">
                 <option value="0">Tất cả </option>
                 <?php
-                     foreach ($listdm as $danhmuc) {
-                         extract($danhmuc);
-                         if ($iddm == $id)
-                             echo '<option value="' . $id . '" selected>' . $tendanhmuc . '</option>';
-                         else
-                             echo '<option value="' . $id . '" >' . $tendanhmuc . '</option>';
-                     }
-                     ?>
+                foreach ($listdm as $danhmuc) {
+                    extract($danhmuc);
+                    if ($iddm == $id)
+                        echo '<option value="' . $id . '" selected>' . $tendanhmuc . '</option>';
+                    else
+                        echo '<option value="' . $id . '" >' . $tendanhmuc . '</option>';
+                }
+                ?>
             </select>
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Vị trí nhà</h1>
-            <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="vitri" value="<?= $vitri ?>">
+            <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="vitri"
+                value="<?= $vitri ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Giá niêm yết</h1>
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="niemyet"
                 value="<?= $niemyet ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="<?= $hinhs ?>">
+            <h1 class="text-[17px] font-medium text-gray-600 p-2">Video tham khảo</h1>
+            <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="video"
+                value="<?= $video ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Trạng thái</h1>
             <select name="tinhtrang" id="">
                 <?php
-            foreach ($listst as $st) {
-                extract($st);
-                echo '<option value="' . $id . '">' . $status_home . '</option>';
-            }
-            ?>
+                foreach ($listst as $st) {
+                    extract($st);
+                    echo '<option value="' . $id . '">' . $status_home . '</option>';
+                }
+                ?>
             </select>
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Mô tả chi tiết</h1>
             <textarea class="border " name="mota" id="" cols="80" rows="10"></textarea>
@@ -53,9 +57,9 @@ $id = $_GET["id"];
             <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=lch">Danh sách căn hộ
                     hiện có</a></button>
             <?php
-        if (isset($thongbao) && ($thongbao != ''))
-            echo $thongbao;
-        ?>
+            if (isset($thongbao) && ($thongbao != ''))
+                echo $thongbao;
+            ?>
         </form>
     </div>
 </div>
