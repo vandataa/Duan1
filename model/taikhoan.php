@@ -26,4 +26,13 @@ function update_tk($id,$tk,$mk,$email,$sdt,$dc,$name,$chucvu){
     $sql = "UPDATE `taikhoan` set `tendangnhap`='".$tk."',`matkhau`='".$mk."',`email`='".$email."',`sdt`='".$sdt."',`diachi`='".$dc."',`hoten`='".$name."',`chucvu`='".$chucvu."' where `taikhoan`.`id`=".$id;
     pdo_execute($sql);
 }
+function load_all_kh(){
+    $sql = "SELECT * FROM `khachhang` where 1 ";
+    // if ($nhanvien > 0) {
+    //     $sql .= " and taikhoan ='" . $nhanvien . "'";
+    //     $sql .= " and chucvu ='" . $chucvu . "'";
+    // }
+    $listnv = pdo_query($sql);
+    return $listnv;
+}
 ?>
