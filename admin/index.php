@@ -112,7 +112,7 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                     //echo "Sorry, there was an error uploading your file.";
                 }
                 $mota = $_POST['mota'];
-                update_ch($id, $iddm, $vitri, $niemyet, $video, $hinh, $mota, $trangthai);
+                update_ch($id, $iddm, $vitri, $niemyet, $hinh, $video, $mota, $trangthai);
                 $thongbao = 'Cập nhật thành công';
             }
             $listch = loadall_ch_cungloai($iddm = 0);

@@ -46,7 +46,7 @@
                 }
                     echo ' <tr>
             <td>' . $id . '</td>
-            <td>' . $tendangnhap . '</td>
+            <td>' . $taikhoan . '</td>
             <td >' . $matkhau . '</td>
             <td>' . $email . '</td>
             <td>' . $sdt . '</td>

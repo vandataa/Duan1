@@ -37,7 +37,8 @@ $id = $_GET["id"];
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="niemyet"
                 value="<?= $niemyet ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
-            <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="<?= $hinhs ?>">
+            <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" 
+                value="<?= $hinhs ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Video tham khảo</h1>
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="video"
                 value="<?= $video ?>">

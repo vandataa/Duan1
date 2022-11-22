@@ -22,3 +22,4 @@ function update_dm($id,$tendanhmuc){
     $sql = "UPDATE `danhmuc` set tendanhmuc='".$tendanhmuc."' WHERE id=".$id;
     pdo_execute($sql);
 }
+?>

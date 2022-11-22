@@ -6,8 +6,8 @@
                         <div class="footer-logo">
                             <div class="top">
                                 <a class="logo" href="index.html">
-                                    <img src="assets/images/logo.png" class="footer-logo1" alt="Logo">
-                                    <img src="assets/images/logo-two.png" class="footer-logo2" alt="Logo">
+                                    <img src="assets/images/logo-three.png" class="footer-logo1" alt="Logo">
+                                    <img src="assets/images/logo-four.png" class="footer-logo2" alt="Logo">
                                 </a>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis sit
                                     voluptas quae</p>

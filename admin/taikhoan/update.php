@@ -11,7 +11,7 @@ $id = $_GET["id"];
     <div class="m-3">
         <form method="POST" enctype="multipart/form-data" action="index.php?build=update_tk&id=<?php echo $id ?>">
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Tên đăng nhập</h1>
-        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="acount"  value="<?=$tendangnhap?>" >
+        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="acount"  value="<?=$taikhoan?>" >
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Mật khẩu</h1>
         <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="pass"  value="<?=$matkhau?>" >
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Email</h1>

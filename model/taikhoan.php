@@ -1,6 +1,11 @@
 <?php
 function insert_nv($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
-    $sql = "INSERT INTO `taikhoan`(`tendangnhap`,`matkhau`,`email`,`sdt`,`diachi`,`hoten`,`chucvu`) value ('$tk','$mk','$email','$sdt','$dc','$name','$chucvu')";
+    $sql = "INSERT INTO `taikhoan`(`taikhoan`,`matkhau`,`email`,`sdt`,`diachi`,`hoten`,`chucvu`) value ('$tk','$mk','$email','$sdt','$dc','$name','$chucvu')";
+    pdo_execute($sql);
+}
+function 
+insert_tk($name,$username,$email,$pass){
+    $sql = "INSERT INTO `taikhoan`(`taikhoan`,`matkhau`,`email`,`hoten`) value ('$username','$pass','$email','$name')";
     pdo_execute($sql);
 }
 function load_cv(){
@@ -23,7 +28,7 @@ function loadone_tk($id){
     return $tk;
 }
 function update_tk($id,$tk,$mk,$email,$sdt,$dc,$name,$chucvu){
-    $sql = "UPDATE `taikhoan` set `tendangnhap`='".$tk."',`matkhau`='".$mk."',`email`='".$email."',`sdt`='".$sdt."',`diachi`='".$dc."',`hoten`='".$name."',`chucvu`='".$chucvu."' where `taikhoan`.`id`=".$id;
+    $sql = "UPDATE `taikhoan` set `taikhoan`='".$tk."',`matkhau`='".$mk."',`email`='".$email."',`sdt`='".$sdt."',`diachi`='".$dc."',`hoten`='".$name."',`chucvu`='".$chucvu."' where `taikhoan`.`id`=".$id;
     pdo_execute($sql);
 }
 function load_all_kh(){

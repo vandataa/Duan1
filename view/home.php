@@ -1,4 +1,211 @@
-<div class="banner-slider-item banner-slider-img-two">
+
+    <div class="banner-area">
+        <div class="banner-slider owl-theme owl-carousel">
+            <div class="banner-slider-item banner-slider-img-one">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="banner-content">
+                                <span class="banner-span">Find A Modern, Safe & Secure Home</span>
+                                <h1>Home Is The Starting Place Of Love, Hope And Dreams</h1>
+                                <div class="tab slides-category-list-tab">
+                                    <form>
+                                        <ul class="tabs banner-form-tag">
+                                            <li>
+                                                <a href="#">All</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">For Buy</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">For Sell</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">For Rent</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab_content">
+                                            <div class="tabs_item">
+                                                <div class="banner-form-area">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    <i class='bx bxs-paper-plane'></i>
+                                                                </label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Type City Or Area">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Type</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Category</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-area">
+                                                        <button type="submit" class="btn common-btn">
+                                                            <i class='flaticon-search-1'></i>
+                                                            Search
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tabs_item">
+                                                <div class="banner-form-area">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    <i class='bx bxs-paper-plane'></i>
+                                                                </label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Type City Or Area">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Type</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Category</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-area">
+                                                        <button type="submit" class="btn common-btn">
+                                                            <i class='flaticon-search-1'></i>
+                                                            Search
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tabs_item">
+                                                <div class="banner-form-area">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    <i class='bx bxs-paper-plane'></i>
+                                                                </label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Type City Or Area">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Type</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Category</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-area">
+                                                        <button type="submit" class="btn common-btn">
+                                                            <i class='flaticon-search-1'></i>
+                                                            Search
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tabs_item">
+                                                <div class="banner-form-area">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    <i class='bx bxs-paper-plane'></i>
+                                                                </label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Type City Or Area">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Type</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="form-group">
+                                                                <select>
+                                                                    <option>Select Category</option>
+                                                                    <option>Some option</option>
+                                                                    <option>Another option</option>
+                                                                    <option>A option</option>
+                                                                    <option>Potato</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-area">
+                                                        <button type="submit" class="btn common-btn">
+                                                            <i class='flaticon-search-1'></i>
+                                                            Search
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slider-item banner-slider-img-two">
                 <div class="d-table">
                     <div class="d-table-cell">
                         <div class="container">
@@ -417,7 +624,33 @@
                 <h2>Recommended Apartment For You</h2>
             </div>
             <div class="apartment-slider owl-theme owl-carousel">
-                <div class="apartment-item">
+                <?php
+                foreach ($fullhouse as $house ) {
+                    extract($house);
+                    $hinhpad = "../uploads/" . $hinh;
+                    echo '<div class="apartment-item">
+                    <img src="'.$hinhpad.'" alt="Apartment">
+                    <div class="inner">
+                        <h3>
+                            <a href="property-details.html">"'.$vitri.'"</a>
+                        </h3>
+                        <span>"'.$niemyet.'"</span>
+                        <ul>
+                            <li>5 BD</li>
+                            <li>2 BA</li>
+                            <li>1800 SF</li>
+                        </ul>
+                    </div>
+                    <div class="property-btn">
+                        <a class="common-btn" href="property-details.html">
+                        View Details
+                        <i class="bx bx-chevron-right"></i>
+                        </a>
+                        </div>
+                        </div>';
+                    }
+                ?>
+                <!-- <div class="apartment-item">
                     <img src="assets/images/apartment/apartment1.jpg" alt="Apartment">
                     <div class="inner">
                         <h3>
@@ -536,7 +769,7 @@
                             <i class='bx bx-chevron-right'></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1240,3 +1473,4 @@
             </div>
         </div>
     </div>
+
