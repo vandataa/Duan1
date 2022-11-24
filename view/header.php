@@ -180,6 +180,41 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
+                                <?php
+                                if(isset($_SESSION['user'])){
+                                    extract($_SESSION['user']);
+                                    ?>
+                                <a href="#" class="nav-link dropdown-toggle">Pages <i
+                                        class='bx bx-chevron-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link dropdown-toggle"><?= $hoten?> <i
+                                                class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="index.php?home=login" class="nav-link">Thông tin tài khoản</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="index.php?home=resign_tk" class="nav-link">Đổi mật khẩu</a>
+                                            </li>
+                                            <?php
+                                            if($chucvu==2 or $chucvu ==3){
+                                            ?>
+                                            <li class="nav-item">
+                                                <a href="admin/index.php" class="nav-link">Trang quản trị</a>
+                                            </li>
+                                            <?php
+                                            }
+                                            ?>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="index.php?home=logout" class="nav-link">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                                <?php    
+                                }else{
+                                ?>
                                 <a href="#" class="nav-link dropdown-toggle">Pages <i
                                         class='bx bx-chevron-down'></i></a>
                                 <ul class="dropdown-menu">
@@ -198,26 +233,12 @@
                                     <li class="nav-item">
                                         <a href="team.html" class="nav-link">Team</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="portfolio.html" class="nav-link">Portfolio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">FAQ</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="404.html" class="nav-link">404 Error Page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
+                            <?php
+                            }
+                            ?>
                             <li class="nav-item">
                                 <a href="about.html" class="nav-link">About Us</a>
                             </li>
@@ -277,7 +298,23 @@
                                 <a href="contact.html" class="nav-link">Contact</a>
                             </li>
                         </ul>
-                        <div class="side-nav">
+                        <?php
+                        if(isset($_SESSION['user'])){
+                            ?>
+                            <div class="side-nav">
+                            <a class="left" href="index.php?home=account">
+                                <i class='bx bxs-user'></i>
+                                <?=$hoten?>
+                            </a>
+                            <a class="left two" href="properties.html">
+                                <i class='bx bx-chevron-right-circle'></i>
+                                New Properties
+                            </a>
+                        </div>
+                         <?php   
+                        }else{
+                            ?>
+                            <div class="side-nav">
                             <a class="left" href="index.php?home=login">
                                 <i class='bx bxs-user'></i>
                                 Account
@@ -287,6 +324,9 @@
                                 New Properties
                             </a>
                         </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </nav>
             </div>

@@ -61,7 +61,11 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                    <input type="submit" name="resign" class="btn common-btn" value="Register">
+                        <?php
+                    if (isset($thongbao) && ($thongbao != ""))
+                        $thongbao;
+                    ?>
+                        <input type="submit" name="resign" class="btn common-btn" value="Register">
                         <!--Register</button> -->
                     </div>
                 </div>

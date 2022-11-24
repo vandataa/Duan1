@@ -14,6 +14,12 @@ function check_user($email, $pass){
     return $tk;
     
 }
+function check_user_agin($email){
+    $sql = "SELECT * FROM `taikhoan` WHERE email='".$email."'";
+    $tk = pdo_query_one($sql);
+    return $tk;
+    
+}
 function load_cv(){
     $sql = "SELECT * FROM `chucvu`";
     $listcv = pdo_query($sql);

@@ -22,10 +22,9 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                     echo ("<script>location.href =' $yourURL '</script>");
                 } else {
                     $thongbao = "Không tìm thấy tài khoản";
-                    $yourURL = "index.php";
+                    $yourURL = "index.php?home=login";
                     echo ("<script>location.href = ' $yourURL '</script>");
                 }
-
             }
             include './view/login.php';
             break;
@@ -36,9 +35,29 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                 $email = $_POST['email'];
                 $pass = $_POST['pass'];
                 $repass = $_POST['repass'];
-                insert_tk($username,$pass,$email,$name);
+                if(check_user_agin($email)==''){
+                    insert_tk($username, $pass, $email, $name);
+                }
+                else{
+                    $thongbao='Email đã tồn tại';
+                }
             }
-            include './view/resign.php';
+            include './view/login.php';
+            break;
+        case 'homedetail':
+            if(isset($_GET['id'])&&($_GET['id'])){
+                $id = ($_GET['id']);
+                $onehouse = loadone_ch($id);
+                extract($onehouse);
+                include './view/detail.php';
+            }else {
+                include './view/home.php';
+            }
+            break;    
+        case 'logout':
+            session_unset();
+            $yourURL = "index.php";
+            echo ("<script>location.href = ' $yourURL '</script>");
             break;
         default:
             include './view/home.php';

@@ -24,6 +24,10 @@
             <div class="user-item">
                 <form method="post" action="index.php?home=login">
                     <h2>Login</h2>
+                    <?php
+                    if (isset($thongbao) && ($thongbao != ""))
+                        $thongbao;
+                    ?>
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Your Email:">
                     </div>

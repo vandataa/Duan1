@@ -627,8 +627,9 @@
             foreach ($fullhouse as $house) {
                 extract($house);
                 $hinhpad = "uploads/" . $hinh;
+                $chitiet = 'index.php?home=homedetail&id='.$id;
                 echo '
-                    <div class="apartment-item">
+                <div class="apartment-item">
                     <img src="' . $hinhpad . '" alt="Apartment">
                     <div class="inner">
                         <h3>
@@ -642,134 +643,15 @@
                         </ul>
                     </div>
                     <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                        View Details
-                        <i class="bx bx-chevron-right"></i>
-                        </a>
-                        </div>
-                    </div>';
+                    <a class="common-btn" href="'.$chitiet.'">
+                    View Details
+                    <i class="bx bx-chevron-right"></i>
+                    </a>
+                    </div>
+                </div>';
+
             }
             ?>
-            <!-- <div class="apartment-item">
-                    <img src="assets/images/apartment/apartment1.jpg" alt="Apartment">
-                    <div class="inner">
-                        <h3>
-                            <a href="property-details.html">Apartment With Furniture</a>
-                        </h3>
-                        <span>$12,000.00</span>
-                        <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
-                        </ul>
-                    </div>
-                    <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                            View Details
-                            <i class='bx bx-chevron-right'></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartment/apartment2.jpg" alt="Apartment">
-                    <div class="inner">
-                        <h3>
-                            <a href="property-details.html">Modern Apartment</a>
-                        </h3>
-                        <span>$13,000.00</span>
-                        <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
-                        </ul>
-                    </div>
-                    <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                            View Details
-                            <i class='bx bx-chevron-right'></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartment/apartment3.jpg" alt="Apartment">
-                    <div class="inner">
-                        <h3>
-                            <a href="property-details.html">Elegant Studio Flat</a>
-                        </h3>
-                        <span>$14,000.00</span>
-                        <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
-                        </ul>
-                    </div>
-                    <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                            View Details
-                            <i class='bx bx-chevron-right'></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartment/apartment4.jpg" alt="Apartment">
-                    <div class="inner">
-                        <h3>
-                            <a href="property-details.html">The Tenement House</a>
-                        </h3>
-                        <span>$15,000.00</span>
-                        <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
-                        </ul>
-                    </div>
-                    <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                            View Details
-                            <i class='bx bx-chevron-right'></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartment/apartment5.jpg" alt="Apartment">
-                    <div class="inner">
-                        <h3>
-                            <a href="property-details.html">The Royal House</a>
-                        </h3>
-                        <span>$16,000.00</span>
-                        <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
-                        </ul>
-                    </div>
-                    <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                            View Details
-                            <i class='bx bx-chevron-right'></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="apartment-item">
-                    <img src="assets/images/apartment/apartment6.jpg" alt="Apartment">
-                    <div class="inner">
-                        <h3>
-                            <a href="property-details.html">Apartment With Sofa</a>
-                        </h3>
-                        <span>$17,000.00</span>
-                        <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
-                        </ul>
-                    </div>
-                    <div class="property-btn">
-                        <a class="common-btn" href="property-details.html">
-                            View Details
-                            <i class='bx bx-chevron-right'></i>
-                        </a>
-                    </div>
-                </div> -->
         </div>
     </div>
 </section>
