@@ -4,9 +4,15 @@ function insert_nv($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
     pdo_execute($sql);
 }
 function 
-insert_tk($name,$username,$email,$pass){
-    $sql = "INSERT INTO `taikhoan`(`taikhoan`,`matkhau`,`email`,`hoten`) value ('$username','$pass','$email','$name')";
+insert_tk($username,$pass,$email,$name){
+    $sql = "INSERT INTO `taikhoan`(`taikhoan`,`matkhau`,`email`,`hoten`)value ('$username','$pass','$email','$name')";
     pdo_execute($sql);
+}
+function check_user($email, $pass){
+    $sql = "SELECT * FROM `taikhoan` WHERE email='".$email."' AND matkhau= '".$pass."'";
+    $tk = pdo_query_one($sql);
+    return $tk;
+    
 }
 function load_cv(){
     $sql = "SELECT * FROM `chucvu`";

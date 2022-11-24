@@ -61,7 +61,8 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <button type="submit" name="resign" class="btn common-btn">Register</button>
+                    <input type="submit" name="resign" class="btn common-btn" value="Register">
+                        <!--Register</button> -->
                     </div>
                 </div>
                 <h4>Or</h4>

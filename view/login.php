@@ -22,15 +22,15 @@
     <div class="user-area ptb-100">
         <div class="container">
             <div class="user-item">
-                <form>
+                <form method="post" action="index.php?home=login">
                     <h2>Login</h2>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email:">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email:">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password:">
+                        <input type="password" name="pass" class="form-control" placeholder="Password:">
                     </div>
-                    <button type="submit" class="btn common-btn">Login</button>
+                    <input type="submit" name="dangnhap" class="btn common-btn" value="Login">
                     <h4>Or</h4>
                     <ul>
                         <li>

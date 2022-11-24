@@ -162,12 +162,21 @@
                                 <a href="index.php?home=allhome" class="nav-link dropdown-toggle active">Các loại nhà
                                     <i class="bx bx-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item">
+                                    <?php
+                                    foreach ($allhome as $home) {
+                                        extract($home);
+                                        echo '
+                                        <li class="nav-item">
+                                        <a href="index-2.html" class="nav-link">'.$tendanhmuc.'</a>
+                                        </li>';
+                                    }
+                                    ?>
+                                    <!-- <li class="nav-item">
                                         <a href="index-2.html" class="nav-link">Home Demo Two</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="index-3.html" class="nav-link">Home Demo Three</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </li>
                             <li class="nav-item">
