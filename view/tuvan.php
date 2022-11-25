@@ -23,6 +23,7 @@ if (isset($_SESSION['user'])) {
     $diachi = $_SESSION['user']['diachi'];
     $email = $_SESSION['user']['email'];
     $sdt = $_SESSION['user']['sdt'];
+    $id_user = $_SESSION['user']['id'];
 } else {
     $hoten = '';
     $diachi = '';
@@ -42,56 +43,60 @@ if (isset($_SESSION['user'])) {
                             <input type="text" name="name" class="form-control" value="<?= $hoten ?>">
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>Địa chỉ</h1>
-                            <input type="text" name="address" class="form-control" value="<?= $diachi ?>">
-                        </div>
+
+                    <input type="hidden" name="id_user" class="form-control" value="<?= $id_user ?>">
+
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <h1>Địa chỉ</h1>
+                        <input type="text" name="address" class="form-control" value="<?= $diachi ?>">
                     </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>Email</h1>
-                            <input type="email" name="email" class="form-control" value="<?= $email ?>">
-                        </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <h1>Email</h1>
+                        <input type="email" name="email" class="form-control" value="<?= $email ?>">
                     </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>Số điện thoại</h1>
-                            <input type="text" name="phone" class="form-control" value="<?= $sdt ?>">
-                        </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <h1>Số điện thoại</h1>
+                        <input type="text" name="phone" class="form-control" value="<?= $sdt ?>">
                     </div>
-                    <?php
+                </div>
+                <?php
                     if (isset($onehouse)) {
                         extract($onehouse);
                     ?>
-                    <input type="hidden" name="id_home" class="form-control" value="<?= $id ?>">
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>Vị trí căn hộ</h1>
-                            <?= $vitri ?>
-                        </div>
+                <input type="hidden" name="id_home" class="form-control" value="<?= $id ?>">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <h1>Vị trí căn hộ</h1>
+                        <?= $vitri ?>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>Giá căn hộ</h1>
-                            <?= $niemyet ?> 
-                        </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <h1>Giá căn hộ</h1>
+                        <?= $niemyet ?>
                     </div>
-                    <?php
+                </div>
+                <?php
                     }
                     ?>
-                    <div class="col-lg-12">
-                        <?php
+                <div class="col-lg-12">
+                    <?php
                         if (isset($thongbao) && ($thongbao != ""))
                             $thongbao;
                         ?>
-                        <input type="submit" name="nhan" class="btn common-btn" value="Nhận tư vấn">
-                    
-                    </div>
+                    <input type="submit" name="nhan" class="btn common-btn" value="Nhận tư vấn">
 
                 </div>
 
-            </form>
         </div>
+
+        </form>
     </div>
+</div>
 </div>

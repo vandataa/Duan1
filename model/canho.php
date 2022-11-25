@@ -4,6 +4,7 @@ function insert_ch($iddm,$vitri,$niemyet,$hinh,$video,$mota,$trangthai){
     pdo_execute($sql);
 }
 
+
 function loadall_ch(){
     $sql = "SELECT * FROM `canho`";
     $listsch = pdo_query($sql);
@@ -16,6 +17,11 @@ function loadone_ch($id){
 }
 function loadone_home($id){
     $sql = "SELECT * FROM `canho` WHERE id = ".$id;
+    $ch = pdo_query_one($sql);
+    return $ch;
+}
+function loadone_home_buy($idsp){
+    $sql = "SELECT * FROM `canho` WHERE id = ".$idsp;
     $ch = pdo_query_one($sql);
     return $ch;
 }

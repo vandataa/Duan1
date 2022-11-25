@@ -1,10 +1,22 @@
 <div class="mx-auto max-w-7xl bg-white p-3 mt-2 rounded ">
     <div class="mx-auto max-w-7xl">
-        
+        <form action="index.php?build=ltk" method="post">
+            <input type="text" name="kyw" id="">
+            <select name="chucvu" id="">
+                <option value="0" selected>--Tất cả--</option>
+                <?php
+                foreach ($listnv as $cv) {
+                    extract($cv);
+                    echo '<option value="' . $id . '">' . $tenchucvu . '</option>';
+                }
+                ?>
+            </select>
+            <input type="submit" name="ok" value="OK">
+        </form>
         <table class="mx-auto ">
             <thead class="w-full mb-2">
                 <tr class="bg-blue-200 w-full">
-                    <th class="w-[50px] ">Mã khách hàng </th>
+                    <th class="w-[50px] ">Mã nhân viên </th>
                     <th class="w-[100px]">Tên đăng nhập</th>
                     <th class="w-[100px]">Mật khẩu</th>
                     <th class="w-[400px]">Email</th>
@@ -27,9 +39,11 @@
                         $chucvu1 = 'Khách hàng';
                     } elseif ($chucvu == 2) {
                         $chucvu1 = 'Nhân viên';
-
+                    } elseif ($chucvu == 3) {
+                        $chucvu1 = 'Quản lí';
                     }
-                        echo ' <tr>
+
+                    echo ' <tr>
                     <td>' . $id . '</td>
                     <td>' . $taikhoan . '</td>
                     <td>' . $matkhau . '</td>
@@ -43,14 +57,13 @@
                         <a href="' . $xoatk . '" class="p-1 bg-blue-300 rounded">Xóa</a>
                     </td>
                 ';
-
                 } ?>
             </tbody>
         </table>
         <iframe src="" frameborder="0"></iframe>
-        <a href="index.php?build=tk"><input class="bg-sky-400 rounded p-1 text-white" type="submit" name="themmoi"
+        <a href="index.php?build=tk_nv"><input class="bg-sky-400 rounded p-1 text-white" type="submit" name="themmoi"
                 value="Thêm mới"></a>
-        <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=ltk">Danh sách tài
+        <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=ltk_nv">Danh sách tài
                 khoản</a></button>
         <?php
         if (isset($thongbao) && ($thongbao != ''))
