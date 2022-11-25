@@ -14,6 +14,30 @@ function loadone_ch($id){
     $ch = pdo_query_one($sql);
     return $ch;
 }
+function loadone_home($id){
+    $sql = "SELECT * FROM `canho` WHERE id = ".$id;
+    $ch = pdo_query_one($sql);
+    return $ch;
+}
+function loadall_home($kyw = '', $iddm)
+{
+    $sql = "SELECT * FROM `canho` where 1 ";
+    if ($kyw != '') {
+        $sql .= " and vitri like '%" . $kyw . "%'";
+    }
+    if ($iddm > 0) {
+        $sql .= " and iddm ='" . $iddm . "'";
+    }
+    $sql .= "order by id desc";
+    $listch = pdo_query($sql);
+    return $listch;
+}
+function home_same_home($id, $iddm)
+{
+    $sql = " SELECT * from  canho WHERE iddm = " . $iddm . " AND id <>" . $id;
+    $listhm = pdo_query($sql);
+    return $listhm;
+}
 function update_ch($id,$iddm, $vitri, $niemyet, $hinh,$video, $mota, $trangthai){
     if ($hinh !="") {
         $sql = "UPDATE `canho` set `vitri` = '" .$vitri. "', `niemyet` = '" .$niemyet. "',`hinh` ='" .$hinh. "',`video`='".$video."',`mota` = '" .$mota. "', `iddm` = '" . $iddm . "',`tinhtrang`='".$trangthai."' WHERE `canho`.`id` = '{$id}'" ;

@@ -167,7 +167,7 @@
                                         extract($home);
                                         echo '
                                         <li class="nav-item">
-                                        <a href="index-2.html" class="nav-link">'.$tendanhmuc.'</a>
+                                        <a href="index.php?home=home_same&iddm='.$id.'" class="nav-link">'.$tendanhmuc.'</a>
                                         </li>';
                                     }
                                     ?>
@@ -192,10 +192,10 @@
                                                 class='bx bx-chevron-down'></i></a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
-                                                <a href="index.php?home=login" class="nav-link">Thông tin tài khoản</a>
+                                                <a href="index.php?home=account" class="nav-link">Thông tin tài khoản</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="index.php?home=resign_tk" class="nav-link">Đổi mật khẩu</a>
+                                                <a href="index.php?home=change_account" class="nav-link">Đổi mật khẩu</a>
                                             </li>
                                             <?php
                                             if($chucvu==2 or $chucvu ==3){

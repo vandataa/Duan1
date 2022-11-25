@@ -25,6 +25,10 @@
             <form method="post" action="index.php?home=resign_tk">
                 <h2>Register</h2>
                 <div class="row">
+                    <?php
+                if (isset($thongbao) && ($thongbao != ""))
+                    $thongbao;
+                ?>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name:">
@@ -61,10 +65,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <?php
-                    if (isset($thongbao) && ($thongbao != ""))
-                        $thongbao;
-                    ?>
+                       
                         <input type="submit" name="resign" class="btn common-btn" value="Register">
                         <!--Register</button> -->
                     </div>

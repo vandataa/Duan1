@@ -4,14 +4,14 @@
             <div class="col-lg-8">
                 <div class="details-item">
                     <div class="common-img-details">
-                        <?php
-                        foreach ($onehouse as $house) {
-                            extract($house);
-                            $hinhpad = 'uploads/' . $hinh;
-                            echo '
 
+                        <?php
+                        $ulr = explode('/', $video);
+                        $hinhpad = 'uploads/' . $hinh;
+                        echo '
+                        
                         <span>Tips & Trick</span>
-                        <h2>'.$char[1].'</h2>
+                        <h2>' . $vitri . '</h2>
 <ul>
 <li>
 <i class="bx bxs-user"></i>
@@ -24,14 +24,13 @@ October 19, 2021
 </li>
 </ul>
 </div>
-<img src="assets/images/blog/details1.jpg" alt="Details">
+<img src="' . $hinhpad . '" alt="Details">
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing</p>
 <div class="video-item">
 <ul class="align-items-center">
 <li>
-<img src="assets/images/blog/details2.jpg" alt="Details">
-<button class="js-modal-btn" data-video-id="Ynr4o0eOjdg">
+<iframe src="https://www.youtube.com/embed/' . $ulr[3] . '" frameborder="0" controls autoplay></iframe>
 <i class="bx bx-play"></i>
 </button>
 </li>
@@ -45,11 +44,19 @@ October 19, 2021
 “It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters”
 </blockquote>
 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English</p>
+                            
+<form action="index.php?home=tuvan" method="post">
+<input type="hidden" name="id" value='.$id.'>
+<input type="hidden" name="vitri" value='.$vitri.'>
+<input type="submit" name="nhan" class="btn common-btn" value="Nhận tư vấn">
+</form>
 ';
-                        }
+
                         ?>
                         <div class="tags align-items-center">
                             <div class="left">
+                                <form action="" method="post"></form>
+                                <input type="hidden" name="" id="">
                                 <ul>
                                     <li>
                                         <span>Share:</span>
@@ -176,11 +183,11 @@ October 19, 2021
                 <div class="col-lg-4">
                     <div class="widget-area">
                         <div class="search widget-item">
-                            <form>
-                                <input type="text" class="form-control" placeholder="Search Here...">
-                                <button type="submit" class="btn">
+                            <form method="post" action="index.php?home=home_same">
+                                <input type="text" class="form-control" name="kyw" placeholder="Search Here...">
+                                <input type="submit" name="kyw" class="btn">
                                     <i class='bx bx-search'></i>
-                                </button>
+                                
                             </form>
                         </div>
                         <div class="popular widget-item">
@@ -237,48 +244,19 @@ October 19, 2021
                         <div class="categories widget-item">
                             <h3>Categories</h3>
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        Resort And Villa
+                                <?php
+                                foreach ($same_home as $home ) {
+                                    extract($home);
+                                    echo '
+                                    <li>
+                                    <a href="index.php?home=detail&id='.$id.'">
+                                        '.$vitri.'
                                         <span>(10)</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        Modern Architect
-                                        <span>(02)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Properties
-                                        <span>(20)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Real Estate
-                                        <span>(18)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Housing Company
-                                        <span>(07)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Sell Or Rent
-                                        <span>(36)</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Apartments
-                                        <span>(10)</span>
-                                    </a>
-                                </li>
+                                    ';
+                                }
+                                ?>
                             </ul>
                         </div>
                         <div class="tags widget-item">

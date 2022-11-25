@@ -624,10 +624,11 @@
         </div>
         <div class="apartment-slider owl-theme owl-carousel">
             <?php
-            foreach ($fullhouse as $house) {
+            foreach ($home_same as $house) {
                 extract($house);
                 $hinhpad = "uploads/" . $hinh;
                 $chitiet = 'index.php?home=detail&id='.$id;
+                if($house !=''){
                 echo '
                 <div class="apartment-item">
                     <img src="' . $hinhpad . '" alt="Apartment">
@@ -648,8 +649,7 @@
                     <i class="bx bx-chevron-right"></i>
                     </a>
                     </div>
-                </div>';
-
+                </div>';}                
             }
             ?>
         </div>
