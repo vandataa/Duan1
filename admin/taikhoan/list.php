@@ -27,22 +27,24 @@
                         $chucvu1 = 'Khách hàng';
                     } elseif ($chucvu == 2) {
                         $chucvu1 = 'Nhân viên';
-
                     }
+                    if ($chucvu == 2 or $chucvu == 1)
+                    {
                         echo ' <tr>
-                    <td>' . $id . '</td>
-                    <td>' . $taikhoan . '</td>
-                    <td>' . $matkhau . '</td>
-                    <td>' . $email . '</td>
-                    <td>' . $sdt . '</td>
-                    <td>' . $diachi . '</td>
-                    <td>' . $hoten . '</td>
-                    <td>' . $chucvu1 . '</td>
-                    <td>
-                        <a href="' . $suatk . '" class="p-1 bg-blue-300 rounded">Sửa</a> 
-                        <a href="' . $xoatk . '" class="p-1 bg-blue-300 rounded">Xóa</a>
-                    </td>
-                ';
+                        <td>' . $id . '</td>
+                        <td>' . $taikhoan . '</td>
+                        <td>' . $matkhau . '</td>
+                        <td>' . $email . '</td>
+                        <td>' . $sdt . '</td>
+                        <td>' . $diachi . '</td>
+                        <td>' . $hoten . '</td>
+                        <td>' . $chucvu1 . '</td>
+                        <td>
+                            <a href="' . $suatk . '" class="p-1 bg-blue-300 rounded">Sửa</a> 
+                            <a href="' . $xoatk . '" class="p-1 bg-blue-300 rounded">Xóa</a>
+                        </td>
+                    ';
+                    }   
 
                 } ?>
             </tbody>

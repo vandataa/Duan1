@@ -23,7 +23,7 @@
             <?php
             foreach($listst as $st){
                 extract($st);
-                echo'<option value="'.$id.'">'.$status_home.'</option>';
+                echo'<option value="'.$id.'">'.$tinhtrang.'</option>';
             }
             ?>
         </select>

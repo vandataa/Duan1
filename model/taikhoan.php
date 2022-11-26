@@ -4,7 +4,7 @@ function insert_nv($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
     pdo_execute($sql);
 }
 function insert_nv1($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
-    $sql = "INSERT INTO `nhanvien`(`hoten`,`tendangnhap`,`matkhau`,`email`,`diachi`,`sdt`,`chucvu`) value ('$name','$tk','$mk','$email','$sdt','$dc','$chucvu')";
+    $sql = "INSERT INTO `nhanvien`(`tennhanvien`,`tendangnhap`,`matkhau`,`email`,`diachi`,`sdt`,`chucvu`) value ('$name','$tk','$mk','$email','$sdt','$dc','$chucvu')";
     pdo_execute($sql);
 }
 function 
@@ -46,21 +46,32 @@ function loadone_tk_buy($idkh){
     $tk = pdo_query_one($sql);
     return $tk;
 }
+function delete_tk($id){
+    $sql = "DELETE FROM `taikhoan` WHERE id = " . $_GET['id'];
+    pdo_execute($sql);
+}
 function update_tk($id,$tk,$mk,$email,$sdt,$dc,$name,$chucvu){
     $sql = "UPDATE `taikhoan` set `taikhoan`='".$tk."',`matkhau`='".$mk."',`email`='".$email."',`sdt`='".$sdt."',`diachi`='".$dc."',`hoten`='".$name."',`chucvu`='".$chucvu."' where `taikhoan`.`id`=".$id;
     pdo_execute($sql);
 }
-function update_tk1($id,$tk,$mk,$email,$sdt,$dc,$name,$chucvu){
-    $sql = "UPDATE `nhanvien` set `taikhoan`='".$tk."',`matkhau`='".$mk."',`email`='".$email."',`sdt`='".$sdt."',`diachi`='".$dc."',`tennhanvien`='".$name."',`chucvu`='".$chucvu."' where `taikhoan`.`id`=".$id;
+function update_tk1($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
+    $sql = "UPDATE `nhanvien` set `taikhoan`='".$tk."',`matkhau`='".$mk."',`email`='".$email."',`sdt`='".$sdt."',`diachi`='".$dc."',`tennhanvien`='".$name."',`chucvu`='".$chucvu."' where `nhanvien`.`tendangnhap`=".$tk;
     pdo_execute($sql);
 }
 function load_all_kh(){
-    $sql = "SELECT * FROM `khachhang` where 1 ";
-    // if ($nhanvien > 0) {
-    //     $sql .= " and taikhoan ='" . $nhanvien . "'";
-    //     $sql .= " and chucvu ='" . $chucvu . "'";
-    // }
+    $sql = "SELECT * FROM khachhang
+    inner JOIN canho ON khachhang.idsp= canho.id
+    inner JOIN nhanvien ON khachhang.nhanvien = nhanvien.id 
+    inner JOIN tinhtrang ON khachhang.tinhtrang = tinhtrang.id 
+    inner JOIN danhmuc ON canho.iddm = danhmuc.id 
+    inner JOIN taikhoan ON taikhoan.id = khachhang.idkh 
+    ";
     $listnv = pdo_query($sql);
     return $listnv;
+}
+function load_status(){
+    $sql = "SELECT * FROM tinhtrang";
+    $listtt = pdo_query($sql);
+    return $listtt;
 }
 ?>

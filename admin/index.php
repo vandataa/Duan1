@@ -132,7 +132,7 @@ if (isset($_SESSION['user'])) {
                         $sdt = $_POST['phone'];
                         $dc = $_POST['address'];
                         $name = $_POST['name'];
-                        $chucvu = $_POST['chucvu'];
+                        $chucvu = 1;
                         insert_nv($tk, $mk, $email, $sdt, $dc, $name, $chucvu);
                         $thongbao = "Thêm mới thành công";
                     }
@@ -140,17 +140,16 @@ if (isset($_SESSION['user'])) {
                     include 'taikhoan/add.php';
                     break;
                 case 'ltk':
-                    if (isset($_POST['ok']) && ($_POST['ok'])) {
-                        $chucvu = $_POST['chucvu'];
-                    } else {
-                        $chucvu = 0;
-                    }
                     $listnv = load_cv();
                     $listtk = loadall_nv_cungcap($chucvu);
                     include './taikhoan/list.php';
                     break;
                 case 'xoatk':
-
+                    if (isset($_GET['id']) && ($_GET['id']) > 0) {
+                        delete_tk($_GET['id']);
+                    }
+                    $listtk = loadall_nv_cungcap($chucvu);
+                    include './taikhoan/list.php';
                     break;
                 case 'suatk':
                     if (isset($_GET['id']) && ($_GET['id']) > 0) {
@@ -169,10 +168,7 @@ if (isset($_SESSION['user'])) {
                         $dc = $_POST['address'];
                         $name = $_POST['name'];
                         $chucvu = $_POST['chucvu'];
-                        if ($chucvu == 2 or $chucvu == 3) {
-                            update_tk($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
-                        }
-                        update_tk1($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
+                        update_tk($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
                         $thongbao = "update  thành công";
                     }
                     $listtk = loadall_nv_cungcap($chucvu);
@@ -180,8 +176,8 @@ if (isset($_SESSION['user'])) {
                     include 'taikhoan/list.php';
                     break;
                 case 'khachhang':
-
                     $listkh = load_all_kh();
+                    $listSt = load_status();
                     include './Khachhang/listkh.php';
                     break;
                 //nhanvien
@@ -194,23 +190,32 @@ if (isset($_SESSION['user'])) {
                         $dc = $_POST['address'];
                         $name = $_POST['name'];
                         $chucvu = $_POST['chucvu'];
-                        if($chucvu ==1){
-                            insert_nv($tk, $mk, $email, $sdt, $dc, $name, $chucvu);
-                        }else{
+                        if ($chucvu == 2 or $chucvu == 3) {
                             insert_nv1($tk, $mk, $email, $sdt, $dc, $name, $chucvu);
                         }
+                        insert_nv($tk, $mk, $email, $sdt, $dc, $name, $chucvu);
+
                         $thongbao = "Thêm mới thành công";
                     }
                     $list_chucvu = load_cv();
                     include 'taikhoannv/add.php';
                     break;
                 case 'ltk_nv':
+                    if (isset($_POST['ok']) && ($_POST['ok'])) {
+                        $chucvu = $_POST['chucvu'];
+                    } else {
+                        $chucvu = 0;
+                    }
                     $listnv = load_cv();
                     $listtk = loadall_nv_cungcap($chucvu);
                     include './taikhoannv/list.php';
                     break;
                 case 'xoatk_nv':
-
+                    if (isset($_GET['id']) && ($_GET['id']) > 0) {
+                        delete_tk($_GET['id']);
+                    }
+                    $listtk = loadall_nv_cungcap($chucvu);
+                    include './taikhoannv/list.php';
                     break;
                 case 'suatk_nv':
                     if (isset($_GET['id']) && ($_GET['id']) > 0) {
@@ -229,10 +234,10 @@ if (isset($_SESSION['user'])) {
                         $dc = $_POST['address'];
                         $name = $_POST['name'];
                         $chucvu = $_POST['chucvu'];
-                        if ($chucvu == 2 or $chucvu == 3) {
-                            update_tk($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
-                        }
-                        update_tk1($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
+                        // if ($chucvu == 2 or $chucvu == 3) {
+                        //     update_tk1($tk, $mk, $email, $sdt, $dc, $name, $chucvu);
+                        // }
+                        update_tk($id, $tk, $mk, $email, $sdt, $dc, $name, $chucvu);
                         $thongbao = "update  thành công";
                     }
                     $listtk = loadall_nv_cungcap($chucvu);
@@ -241,8 +246,8 @@ if (isset($_SESSION['user'])) {
                     break;
                 case 'logout':
                     session_unset();
-                        $yourURL = "index.php";
-                        echo ("<script>location.href = ' $yourURL '</script>");
+                    $yourURL = "index.php";
+                    echo ("<script>location.href = ' $yourURL '</script>");
                     break;
                 default:
                     include 'home.php';
@@ -284,7 +289,6 @@ if (isset($_GET['build']) && ($_GET['build'])) {
                     break;
                 }
             }
-
             break;
     }
 }

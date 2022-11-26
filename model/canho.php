@@ -63,7 +63,7 @@ function loadall_ch_cungloai($iddm)
     return $listsp;
 }
 function loadall_status(){
-    $sql = "SELECT * FROM `tinhtrang`";
+    $sql = "SELECT * FROM `tinhtrang_home`";
     $listst = pdo_query($sql);
     return $listst;
 }

@@ -1,6 +1,6 @@
 <div class="mx-auto max-w-7xl bg-white p-3 mt-2 rounded ">
     <div class="mx-auto max-w-7xl">
-        <form action="index.php?build=ltk" method="post">
+        <form action="index.php?build=ltk_nv" method="post">
             <input type="text" name="kyw" id="">
             <select name="chucvu" id="">
                 <option value="0" selected>--Tất cả--</option>
@@ -32,8 +32,8 @@
 
                 <?php foreach ($listtk as $tk) {
                     extract($tk);
-                    $suatk = "index.php?build=suatk&id=" . $id;
-                    $xoatk = "index.php?build=xoatk&id=" . $id;
+                    $suatk = "index.php?build=suatk_nv&id=" . $id;
+                    $xoatk = "index.php?build=xoatk_nv&id=" . $id;
                     $chucvu1 = "";
                     if ($chucvu == 1) {
                         $chucvu1 = 'Khách hàng';

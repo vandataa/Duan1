@@ -55,7 +55,7 @@
             <td>' . $vitri . '</td>
             <td class="w-5 h-3">' . $hinhch . '</td>
             <td>
-            <iframe src="https://www.youtube.com/embed/' . $ulr[3] . '" frameborder="0" controls autoplay></iframe>
+            <iframe src="https://www.youtube.com/embed/' . $ulr[3] . '" frameborder="0"  controls autoplay></iframe>
             </td>
             <td>' . $niemyet . '</td>
             <td>' . $trangThai   . '</td>

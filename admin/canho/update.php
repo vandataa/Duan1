@@ -47,12 +47,14 @@ $id = $_GET["id"];
                 <?php
                 foreach ($listst as $st) {
                     extract($st);
-                    echo '<option value="' . $id . '">' . $status_home . '</option>';
+                    echo '<option value="' . $id . '">' . $tinhtrang . '</option>';
                 }
                 ?>
             </select>
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Mô tả chi tiết</h1>
-            <textarea class="border " name="mota" id="" cols="80" rows="10"></textarea>
+            <textarea class="border " name="mota" id="" cols="80" rows="10">
+                <?=$mota?>
+            </textarea>
             <br>
             <input class="bg-sky-400 rounded p-1 text-white" type="submit" name="update" value="Sửa căn hộ">
             <button class="ml-2 mt-4 rounded bg-sky-400 text-white p-1"><a href="index.php?build=lch">Danh sách căn hộ

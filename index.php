@@ -85,7 +85,6 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                 $tinhtrang = 1;
                 $nhanvien = 1;
                 buy_house($id_user, $id_home, $tinhtrang, $nhanvien);
-
             }
             break;
 
@@ -96,7 +95,6 @@ if (isset($_GET['home']) && ($_GET['home'])) {
             extract($_SESSION['user']);
             $idkh = $_SESSION['user']['id'];
             $onetk = home_buy_now($idkh);
-           
             include './view/chucmung.php';
             break;
         case 'change_account':

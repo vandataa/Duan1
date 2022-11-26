@@ -319,7 +319,7 @@
                                 <i class='bx bxs-user'></i>
                                 Account
                             </a>
-                            <a class="left two" href="properties.html">
+                            <a class="left two" href="index.php?home=my_house">
                                 <i class='bx bx-chevron-right-circle'></i>
                                 New Properties
                             </a>
