@@ -52,7 +52,7 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                 $pass = $_POST['pass'];
                 $repass = $_POST['repass'];
                 if (check_user_agin($email) == '') {
-                    insert_tk($username, $pass, $email, $name);
+                    insert_tk($username,$pass,$email,$name);
                     include './view/login.php';
                 } else {
                     $thongbao = 'Email đã tồn tại';
@@ -86,15 +86,20 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                 $nhanvien = 1;
                 buy_house($id_user, $id_home, $tinhtrang, $nhanvien);
             }
+            
+            $listkh = load_home_kh($id);
+            include './view/chucmung.php';
             break;
 
         case 'account':
             include './view/account.php';
             break;
         case 'my_house':
-            extract($_SESSION['user']);
-            $idkh = $_SESSION['user']['id'];
-            $onetk = home_buy_now($idkh);
+            if (isset($_SESSION['user']) && ($_SESSION['user'])) {
+                $id = $_SESSION['user']['id'];
+            }
+            $listkh = load_home_kh($id);
+            $listSt = load_status();
             include './view/chucmung.php';
             break;
         case 'change_account':

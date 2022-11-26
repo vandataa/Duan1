@@ -69,6 +69,17 @@ function load_all_kh(){
     $listnv = pdo_query($sql);
     return $listnv;
 }
+function load_home_kh($id){
+    $sql = "SELECT * FROM khachhang
+    inner JOIN canho ON khachhang.idsp= canho.id
+    inner JOIN nhanvien ON khachhang.nhanvien = nhanvien.id 
+    inner JOIN tinhtrang ON khachhang.tinhtrang = tinhtrang.id 
+    inner JOIN danhmuc ON canho.iddm = danhmuc.id 
+    inner JOIN taikhoan ON taikhoan.id = khachhang.idkh 
+    where khachhang.idkh=".$id;
+    $listnv = pdo_query($sql);
+    return $listnv;
+}
 function load_status(){
     $sql = "SELECT * FROM tinhtrang";
     $listtt = pdo_query($sql);

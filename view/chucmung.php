@@ -25,36 +25,46 @@
             <form method="post" action="index.php?home=resign_tk">
                 <h2>mong quý khách theo dõi điện thoại và email để dễ dàng trao đổi</h2>
                 <div class="row">
-                    <?php 
-                     extract($onetk);
-                    //  $sanpham = loadone_home_buy();
+                    <?php
+                    foreach ($listkh as $kh) {
+                        extract($kh);
+                        ?>
+                        
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <h1>
+                                <?= $vitri ?>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <h1>
+                                <?= $hoten ?>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <h1>
+                                <?= $idsp ?>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <?php
+                    }
                     ?>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1><?=$idkh?></h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1><?=$hoten?></h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1><?=$idsp?></h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1></h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1></h1>
-                        </div>
-                    </div>
-                </form>
+            </form>
         </div>
     </div>
 </div>
