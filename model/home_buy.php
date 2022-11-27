@@ -21,9 +21,14 @@ function home_buy_now($idkh)
 function full_home_buy_now($idkh)
 {
     $sql = "SELECT * FROM `khachhang` 
-    where idkh=".$idkh;
+    where idkh=" . $idkh;
     $listch = pdo_query($sql);
     return $listch;
 }
+function change_time($id, $date,$nhanvien,$ghichu)
+{
+    $sql = "UPDATE `khachhang` set `ngaytuvan`='" . $date . "',`nhanvien`='".$nhanvien."',`ghichu`='".$ghichu."' where id_kh=" . $id;
+    pdo_execute($sql);
 
+}
 ?>

@@ -17,54 +17,46 @@
         </div>
     </div>
 </div>
-
-
 <div class="user-area ptb-100">
     <div class="container">
         <div class="user-item">
-            <form method="post" action="index.php?home=resign_tk">
-                <h2>mong quý khách theo dõi điện thoại và email để dễ dàng trao đổi</h2>
-                <div class="row">
-                    <?php
+
+            <?php
+                if (isset($_SESSION['user'])) {
+                ?>
+
+            <h2>mong quý khách theo dõi điện thoại và email để dễ dàng trao đổi</h2>
+            <div class="row">
+                <?php
                     foreach ($listkh as $kh) {
                         extract($kh);
-                        ?>
-                        
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>
-                                <?= $vitri ?>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>
-                                <?= $hoten ?>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1>
-                                <?= $idsp ?>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1></h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <h1></h1>
-                        </div>
-                    </div>
-                    <?php
+                        $tdtt = 'index.php?home=ct_one_house&&id=' . $id_kh;
+                        $stt = 0;
+                        $stt++;
+                    ?>
+                <span>Số nhà:<?= $stt ?></span>
+
+                <span>Địa chỉ nhà:<?= $vitri ?></span>
+
+                <span>Số điện thoại:<?= $sdt ?></span>
+
+                <span>Ngày tư vấn:<?= $ngaytuvan ?></span>
+
+                <span>Nhân viên phụ trách:<?= $tennhanvien ?></span>
+
+                <span><a href="<?= $tdtt ?>">Chi tiết</a></span>
+
+                <?php
                     }
                     ?>
-            </form>
+                <?php
+                } else {
+                ?>
+                <h2>Bạn hãy đăng nhập để xem các căn nhà đã kí kết</h2>
+                <div class="row">
+                    <?php
+                }
+                    ?>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
