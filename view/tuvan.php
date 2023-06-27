@@ -40,29 +40,35 @@ if (isset($_SESSION['user'])) {
                     <div class="col-lg-12">
                         <div class="form-group">
                             <h1>Họ và tên</h1>
-                            <input type="text" name="name" class="form-control" value="<?= $hoten ?>">
+                            <input type="text" name="name" class="form-control" value="<?= $hoten ?>" required>
                         </div>
                     </div>
 
-                    <input type="hidden" name="id_user" class="form-control" value="<?= $id_user ?>">
+                    <input type="hidden" name="id_user" class="form-control" value="<?= $id_user ?>" required>
 
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
                         <h1>Địa chỉ</h1>
-                        <input type="text" name="address" class="form-control" value="<?= $diachi ?>">
+                        <input type="text" name="address" class="form-control" value="<?= $diachi ?>" required>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
                         <h1>Email</h1>
-                        <input type="email" name="email" class="form-control" value="<?= $email ?>">
+                        <input type="email" name="email" class="form-control" value="<?= $email ?>"required>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="form-group">
                         <h1>Số điện thoại</h1>
-                        <input type="text" name="phone" class="form-control" value="<?= $sdt ?>">
+                        <input type="text" name="phone" class="form-control" value="<?= $sdt ?>"required>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <h1>Ngày tư vấn</h1>
+                        <input type="date" name="ngaytuvan" class="form-control" required>
                     </div>
                 </div>
                 <?php

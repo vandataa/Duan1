@@ -4,7 +4,7 @@ function insert_nv($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
     pdo_execute($sql);
 }
 function insert_nv1($tk,$mk,$email,$sdt,$dc,$name,$chucvu){
-    $sql = "INSERT INTO `nhanvien`(`tennhanvien`,`tendangnhap`,`matkhau`,`email`,`diachi`,`sdt`,`chucvu`) value ('$name','$tk','$mk','$email','$sdt','$dc','$chucvu')";
+    $sql = "INSERT INTO `nhanvien`(`hoten`,`taikhoan`,`matkhau`,`email`,`sdt`,`diachi`,`chucvu`) value ('$name','$tk','$mk','$email','$sdt','$dc','$chucvu')";
     pdo_execute($sql);
 }
 function 
@@ -70,8 +70,8 @@ function load_all_kh(){
     return $listnv;
 }
 function load_home_kh($id){
-    $sql = "SELECT * FROM khachhang
-    inner JOIN canho ON khachhang.idsp= canho.id
+    $sql = "SELECT *,nhanvien.hoten as tennhanvien FROM khachhang
+    inner JOIN canho ON khachhang.idsp = canho.id
     inner JOIN nhanvien ON khachhang.nhanvien = nhanvien.id 
     inner JOIN tinhtrang ON khachhang.tinhtrang = tinhtrang.id 
     inner JOIN danhmuc ON canho.iddm = danhmuc.id 
@@ -81,7 +81,7 @@ function load_home_kh($id){
     return $listnv;
 }
 function load_one_home_kh($id){
-    $sql = "SELECT * FROM khachhang
+    $sql = "SELECT *,canho.vitri FROM khachhang
     inner JOIN canho ON khachhang.idsp= canho.id
     inner JOIN nhanvien ON khachhang.nhanvien = nhanvien.id 
     inner JOIN tinhtrang ON khachhang.tinhtrang = tinhtrang.id 

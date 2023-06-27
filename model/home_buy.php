@@ -1,23 +1,23 @@
 <?php
-function buy_house($id_user, $id_home, $tinhtrang, $nhanvien)
+function buy_house($id_user, $id_home, $tinhtrang, $nhanvien,$ngaytuvan)
 {
-    $sql = "INSERT INTO `khachhang`(`idkh`,`idsp`,`tinhtrang`,`nhanvien`) value ('$id_user','$id_home','$tinhtrang','$nhanvien' )";
+    $sql = "INSERT INTO `khachhang`(`idkh`,`idsp`,`tinhtrang`,`nhanvien`,`ngaytuvan`) value ('$id_user','$id_home','$tinhtrang','$nhanvien','$ngaytuvan' )";
     pdo_execute($sql);
 }
-function nhanvien()
-{
-    $sql = "SELECT * FROM `taikhoan` WHERE chucvu = 2";
-    $tk = pdo_query_one($sql);
-    return $tk;
-}
-function home_buy_now($idkh)
-{
+// function nhanvien()
+// {
+//     $sql = "SELECT * FROM `taikhoan` WHERE chucvu = 2";
+//     $tk = pdo_query_one($sql);
+//     return $tk;
+// }
+// function home_buy_now($idkh)
+// {
 
-    $sql = "SELECT * FROM `khachhang` where 1 idkh =' . $idkh . '";
-    $sql .= "order by id desc";
-    $listch = pdo_query($sql);
-    return $listch;
-}
+//     $sql = "SELECT * FROM `khachhang` where 1 idkh =' . $idkh . '";
+//     $sql .= "order by id desc";
+//     $listch = pdo_query($sql);
+//     return $listch;
+// }
 function full_home_buy_now($idkh)
 {
     $sql = "SELECT * FROM `khachhang` 

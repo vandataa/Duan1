@@ -11,13 +11,19 @@
             ?>
         </select>
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Vị trí nhà</h1>
-        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="vitri" value="Vị trí của căn hộ" >
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="vitri" placeholder="Vị trí của căn hộ" >
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Giá niêm yết</h1>
-        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="niemyet" value="Giá niêm yết dự kiến" >
-        <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
-        <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="Hình ảnh tham khảo" >
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="niemyet" placeholder="Giá niêm yết dự kiến" >
+        <h1 class="text-[17px] font-medium text-gray-600 p-2">Hình tham khảo</h1>
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="file" name="hinh" placeholder="Hình ảnh tham khảo" >
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Video tham khảo</h1>
-        <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="video" value="video tham khảo" >   
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="video" placeholder="video tham khảo" >   
+        <h1 class="text-[17px] font-medium text-gray-600 p-2">Số phòng</h1>
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="sophong" placeholder="Số phòng" >  
+        <h1 class="text-[17px] font-medium text-gray-600 p-2">Số Giường</h1>
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="sogiuong" placeholder="Số giường" >  
+        <h1 class="text-[17px] font-medium text-gray-600 p-2">Diện tích</h1>
+        <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="metvuong" placeholder="Diện tích" >  
         <h1 class="text-[17px] font-medium text-gray-600 p-2">Trạng thái</h1>
         <select name="tinhtrang" id="">
             <?php

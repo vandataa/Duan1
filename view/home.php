@@ -637,9 +637,9 @@
                         </h3>
                         <span>' . $niemyet . '</span>
                         <ul>
-                            <li>5 BD</li>
-                            <li>2 BA</li>
-                            <li>1800 SF</li>
+                            <li>'.$sophong.' BD</li>
+                            <li>'.$sogiuong.' BA</li>
+                            <li>'.$metvuong.' SF</li>
                         </ul>
                     </div>
                     <div class="property-btn">

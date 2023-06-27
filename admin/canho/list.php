@@ -18,11 +18,14 @@
             <thead class="w-full mb-2">
 
                 <tr class="bg-blue-200 w-full">
-                    <th class="w-[50px] ">Mã Nhà</th>
-                    <th class="w-[300px]">Vị trí nhà</th>
-                    <th class="w-[400px]">Hình</th>
-                    <th class="w-[400px]">Video</th>
-                    <th class="w-[90px]">Giá niêm yết</th>
+                    <th class="border-r-1 border-black w-[50px] ">Mã Nhà</th>
+                    <th class="border-r-1 border-black w-[300px]">Vị trí nhà</th>
+                    <th class="border-r-1 border-black w-[400px]">Hình</th>
+                    <th class="border-r-1 border-black w-[400px]">Video</th>
+                    <th class="border-r-1 border-black w-[40px]">Số phòng</th>
+                    <th class="border-r-1 border-black w-[40px]">Số giường</th>
+                    <th class="border-r-1 border-black w-[40px]">Diện tích</th>
+                    <th class="border-r-1 border-black w-[90px]">Giá niêm yết</th>
                     <th class="w-[100px]">Trạng thái</th>
                     <th></th>
 
@@ -57,6 +60,9 @@
             <td>
             <iframe src="https://www.youtube.com/embed/' . $ulr[3] . '" frameborder="0"  controls autoplay></iframe>
             </td>
+            <td>' . $sophong . '</td>
+            <td>' . $sogiuong . '</td>
+            <td>' . $metvuong . '</td>
             <td>' . $niemyet . '</td>
             <td>' . $trangThai   . '</td>
             <td >

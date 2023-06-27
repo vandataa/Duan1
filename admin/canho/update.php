@@ -37,11 +37,19 @@ $id = $_GET["id"];
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="niemyet"
                 value="<?= $niemyet ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">HÌnh tham khảo</h1>
-            <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" 
-                value="<?= $hinhs ?>">
+            <input class="border-black border-2 rounded-[20px] w-[600px]" type="file" name="hinh" value="<?= $hinhs ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Video tham khảo</h1>
             <input class="border-black border-2 rounded-[20px] w-[600px]" type="text" name="video"
                 value="<?= $video ?>">
+            <h1 class="text-[17px] font-medium text-gray-600 p-2">Số phòng</h1>
+            <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="sophong"
+                placeholder="Số phòng"  value="<?= $sophong ?>">
+            <h1 class="text-[17px] font-medium text-gray-600 p-2">Số Giường</h1>
+            <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="sogiuong"
+                placeholder="Số giường" value="<?= $sogiuong ?>">
+            <h1 class="text-[17px] font-medium text-gray-600 p-2">Diện tích</h1>
+            <input class="border-black border-2 rounded-[20px] w-[600px] pl-[20px]" type="text" name="metvuong"
+                placeholder="Diện tích" value="<?= $metvuong ?>">
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Trạng thái</h1>
             <select name="tinhtrang" id="">
                 <?php
@@ -53,7 +61,7 @@ $id = $_GET["id"];
             </select>
             <h1 class="text-[17px] font-medium text-gray-600 p-2">Mô tả chi tiết</h1>
             <textarea class="border " name="mota" id="" cols="80" rows="10">
-                <?=$mota?>
+                <?= $mota ?>
             </textarea>
             <br>
             <input class="bg-sky-400 rounded p-1 text-white" type="submit" name="update" value="Sửa căn hộ">

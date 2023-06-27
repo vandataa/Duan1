@@ -83,8 +83,9 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                 $id_user = $_POST['id_user'];
                 $id_home = $_POST['id_home'];
                 $tinhtrang = 1;
+                $ngaytuvan = $_POST['ngaytuvan'];
                 $nhanvien = 1;
-                buy_house($id_user, $id_home, $tinhtrang, $nhanvien);
+                buy_house($id_user, $id_home, $tinhtrang, $nhanvien,$ngaytuvan);
             }
             $listkh = load_home_kh($id);
             include './view/chucmung.php';
@@ -107,7 +108,6 @@ if (isset($_GET['home']) && ($_GET['home'])) {
                 $onehome = load_one_home_kh($id);
                 extract($onehome);
             }
-           
             $list_nhanvien = load_nv();
             include './view/chitiet.php';
             break;

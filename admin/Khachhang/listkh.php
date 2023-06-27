@@ -45,7 +45,7 @@
             <td>' . $vitri . '</td>
             <td>' . $tendanhmuc . '</td>
             <td>' . $status_home . '</td>
-            <td>' . $tennhanvien . '</td>
+            <td>' . $nhanvien . '</td>
             <td>' . $ngaytuvan . '</td>
             <td>
                 <a href="' . $suakh . '" class="p-1 bg-blue-300 rounded">Sửa</a> 

@@ -64,8 +64,11 @@ if (isset($_SESSION['user'])) {
                             //echo "Sorry, there was an error uploading your file.";
                         }
                         $video = $_POST['video'];
+                        $sophong = $_POST['sophong'];
+                        $sogiuong = $_POST['sogiuong'];
+                        $metvuong = $_POST['metvuong'];
                         $mota = $_POST['mota'];
-                        insert_ch($iddm, $vitri, $niemyet, $hinh, $video, $mota, $trangthai);
+                        insert_ch($iddm, $vitri, $niemyet, $hinh, $video,$sophong,$sogiuong,$metvuong, $mota, $trangthai);
                         $thongbao = 'Thêm thành công';
                     }
                     $listst = loadall_status();
@@ -246,7 +249,7 @@ if (isset($_SESSION['user'])) {
                     break;
                 case 'logout':
                     session_unset();
-                    $yourURL = "index.php";
+                    $yourURL = "../index.php";
                     echo ("<script>location.href = ' $yourURL '</script>");
                     break;
                 default:

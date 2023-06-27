@@ -127,7 +127,7 @@
                             <li>
                                 <div class="inner">
                                     <i class='bx bx-phone-call'></i>
-                                    <a href="tel:+0123654987">0962096125</a>
+                                    <a href="tel:+84962096125">0962096125</a>
                                     <span>Make a call</span>
                                 </div>
                             </li>

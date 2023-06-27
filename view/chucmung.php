@@ -25,12 +25,12 @@
                 if (isset($_SESSION['user'])) {
                 ?>
 
-            <h2>mong quý khách theo dõi điện thoại và email để dễ dàng trao đổi</h2>
+            <h2>Mong quý khách theo dõi điện thoại và email để dễ dàng trao đổi</h2>
             <div class="row">
                 <?php
                     foreach ($listkh as $kh) {
                         extract($kh);
-                        $tdtt = 'index.php?home=ct_one_house&&id=' . $id_kh;
+                        $tdtt = 'index.php?home=ct_one_house&&id=' . $idkh;
                         $stt = 0;
                         $stt++;
                     ?>
